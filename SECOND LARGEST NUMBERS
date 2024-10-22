@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void main() {
+    int n, number;
+    int first = -10;
+    int second = -10;
+
+    printf("Enter the number of elements (at least 2): ");
+    scanf("%d", &n);
+    if (n < 2)
+    {
+        printf("Please enter at least two numbers.\n");
+        return 1;
+    }
+
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++)
+        {
+        scanf("%d", &number);
+
+        if (number > first)
+        {
+            second = first;
+            first = number;
+        } else if (number > second && number < first)
+        {
+            second = number;
+        }
+    }
+
+    if (second == -10)
+        {
+        printf("There is no second largest number.\n");
+    } else {
+        printf("The second largest number is: %d\n", second);
+    }
+
+    return 0;
+}
