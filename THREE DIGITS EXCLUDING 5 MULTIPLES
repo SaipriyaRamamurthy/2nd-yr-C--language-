@@ -1,0 +1,14 @@
+#include <stdio.h>
+void main()
+{
+    printf("Three-digit numbers excluding multiples of 5:\n");
+    for (int i = 100; i <= 999; i++)
+        {
+        if (i % 5 != 0)
+        {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+    return 0;
+}
